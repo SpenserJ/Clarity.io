@@ -1,0 +1,32 @@
+<!doctype html5>
+<html>
+  <head>
+    <title>Clarity.io</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min.js"></script>
+    <script type="text/html" id="template-admin">
+<p>Unimplemented</p>
+    </script>
+    <script type="text/html" id="template-status">
+<table>
+  <tbody data-bind="foreach: statuses">
+    <tr>
+      <td data-bind="text: name"></td>
+      <td data-bind="text: status"></td>
+    </tr>
+  </tbody>
+</table>
+    </script>
+  </head>
+  <body>
+    <div data-bind="foreach: views">
+      <a href="#" data-bind="text: title, click: $root.selectedView"></a>&nbsp;
+     </div>
+    <hr/>
+    <div data-bind="with: selectedView">
+      <div data-bind="template: { name: templateName, data: data }"></div>
+    </div>
+    <script src="/js/clarity.js"></script>
+  </body>
+</html>

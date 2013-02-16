@@ -1,0 +1,23 @@
+{
+  "name": "clarity",
+  "description": "The cleanest of rtorrent interfaces.",
+  "keywords": [ "rtorrent", "webui" ],
+  "author": "Spenser Jones <spenser.e.jones@gmail.com>",
+  "version": "0.0.1",
+  "main": "./lib/clarity.js",
+  "bin": {
+    "clarity": "./clarity"
+  },
+  "engines": {
+    "node": ">=0.8.x"
+  },
+  "scripts": {
+    "start": "clarity"
+  },
+  "dependencies": {
+    "express": "3.0.x",
+    "socket.io": "0.9.x",
+    "nconf": "0.6.x",
+    "less-middleware": "0.1.x"
+  }
+}
