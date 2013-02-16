@@ -20,13 +20,22 @@
     </script>
   </head>
   <body>
-    <div data-bind="foreach: views">
-      <a href="#" data-bind="text: title, click: $root.selectedView"></a>&nbsp;
-     </div>
-    <hr/>
-    <div data-bind="with: selectedView">
-      <div data-bind="template: { name: templateName, data: data }"></div>
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Size</th>
+          <th>Progress</th>
+        </tr>
+      <thead>
+      <tbody data-bind="foreach: torrents">
+        <tr>
+          <td data-bind="text: data.index"></td>
+          <td data-bind="text: data.name"></td>
+        </tr>
+      </tbody>
+    </table>
     <script src="/js/clarity.js"></script>
   </body>
 </html>
